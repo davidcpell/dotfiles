@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/davidp/.oh-my-zsh
+export ZSH=/Users/davidpell/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -94,5 +94,6 @@ alias gitkill="git checkout . && git clean -f -d"
 # zeus aliases
 alias zs="zeus start"
 alias zc="zeus console"
+alias zr="zeus rspec"
 
 cd ~/work/expedia
