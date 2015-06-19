@@ -1,8 +1,15 @@
 " basics
-set sw=2
+set sw=2                         " shiftwidth
 set relativenumber
 syntax on
 filetype plugin indent on
+colorscheme desert
+set nobackup
+
+" indentation 
+filetype plugin indent on 
+set autoindent
+map <Leader>i mmgg=G`m<CR>
 
 " search options
 set incsearch
@@ -15,6 +22,3 @@ nmap <leader>h :nohlsearch<cr>
 set ttyfast
 set mouse=a
 set ttymouse=xterm2
-
-" macros
-map <Leader>i mmgg=G`m<CR>
