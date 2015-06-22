@@ -80,7 +80,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias es="exec $SHELL"
-alias zshrc="vim ~/.zshrc"
+alias zshrc="vim ~/code/dotfiles/.zshrc"
+alias vimrc="vim ~/code/dotfiles/.vimrc"
+
+# move around
+alias cdblog="cd ~/code/blog"
 
 # git aliases
 alias gaa="git add -A"
@@ -95,5 +99,11 @@ alias gitkill="git checkout . && git clean -f -d"
 alias zs="zeus start"
 alias zc="zeus console"
 alias zr="zeus rspec"
+
+# rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# set up path for vim 7.4
+export PATH="/usr/local/Cellar/vim/7.4.712/bin:$PATH"
 
 cd ~/work/expedia

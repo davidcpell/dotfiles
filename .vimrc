@@ -1,6 +1,7 @@
 " basics
 set sw=2                         " shiftwidth
 set relativenumber
+set number
 syntax on
 filetype plugin indent on
 colorscheme desert
@@ -17,6 +18,14 @@ set hlsearch
 set ignorecase
 set smartcase
 nmap <leader>h :nohlsearch<cr>
+
+" split options
+set splitbelow
+set splitright
+set winwidth=84
+set winheight=5
+set winminheight=5
+set winheight=999
 
 " mouse options
 set ttyfast
