@@ -48,21 +48,34 @@ ZSH_THEME="murilasso"
 plugins=(git bundler)
 
 # User configuration
+os=`uname`
 
-export PATH="/usr/local/rvm/gems/ruby-2.2.0/bin:/usr/local/rvm/gems/ruby-2.2.0@global/bin:/usr/local/rvm/rubies/ruby-2.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/rvm/bin:/usr/local/java/jdk1.7.0_02/bin:/usr/local/java/jdk1.7.0_02/jre/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+if [ os = "Darwin" ] ; then 
+  export PATH="/usr/local/rvm/gems/ruby-2.2.0/bin:/usr/local/rvm/gems/ruby-2.2.0@global/bin:/usr/local/rvm/rubies/ruby-2.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/rvm/bin:/usr/local/java/jdk1.7.0_02/bin:/usr/local/java/jdk1.7.0_02/jre/bin"
+
+  export PATH="~/.rbenv/shims:$PATH"
+  if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+  ### Added by the Heroku Toolbelt
+  export PATH="/usr/local/heroku/bin:$PATH"
+elif [ os = "Linux" ] ; then  
+  export PATH="/home/davidp/local/bin:/usr/local/rvm/gems/ruby-2.2.0/bin:/usr/local/rvm/gems/ruby-2.2.0@global/bin:/usr/local/rvm/rubies/ruby-2.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/rvm/bin:/usr/local/java/jdk1.7.0_02/bin:/usr/local/java/jdk1.7.0_02/jre/bin"
+fi
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+#  Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+ export EDITOR='vim'
+else
+ export EDITOR='atom'
+fi
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# set up path for vim 7.4
+export PATH="/usr/local/Cellar/vim/7.4.712_1/bin:$PATH"
+
+# use 256 color mode for vim
+export TERM=xterm-256color
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -75,9 +88,6 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias es="exec $SHELL"
 alias zshrc="vim ~/code/dotfiles/.zshrc"
@@ -85,8 +95,12 @@ alias vimrc="vim ~/code/dotfiles/.vimrc"
 
 # move around
 alias cdblog="cd ~/code/blog"
+alias beedle="cd ~/work/personal/beedle"
+alias dotfiles="cd ~/code/dotfiles"
+alias upcase="cd ~/code/ruby/upcase"
+alias stats="cd ~/work/stats"
 
-# git aliases
+# git
 alias gaa="git add -A"
 alias gb="git branch"
 alias gco="git checkout"
@@ -95,15 +109,9 @@ alias gca="git commit -am"
 alias gcm="git checkout master"
 alias gitkill="git checkout . && git clean -f -d"
 
-# zeus aliases
+# zeus
 alias zs="zeus start"
 alias zc="zeus console"
 alias zr="zeus rspec"
 
-# rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# set up path for vim 7.4
-export PATH="/usr/local/Cellar/vim/7.4.712/bin:$PATH"
-
-cd ~/work/expedia
+cd ~/work/stats
