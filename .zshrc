@@ -1,5 +1,11 @@
+os=`uname`
+
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/davidpell/.oh-my-zsh
+if [ os = "Darwin" ] ; then 
+  export ZSH=/Users/davidpell/.oh-my-zsh
+elif [ os = "Linux" ] ; then 
+  export ZSH=/home/davidp/.oh-my-zsh
+fi
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -48,8 +54,6 @@ ZSH_THEME="murilasso"
 plugins=(git bundler)
 
 # User configuration
-os=`uname`
-
 if [ os = "Darwin" ] ; then 
   export PATH="/usr/local/rvm/gems/ruby-2.2.0/bin:/usr/local/rvm/gems/ruby-2.2.0@global/bin:/usr/local/rvm/rubies/ruby-2.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/rvm/bin:/usr/local/java/jdk1.7.0_02/bin:/usr/local/java/jdk1.7.0_02/jre/bin"
 
