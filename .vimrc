@@ -1,33 +1,11 @@
-" basics
-set sw=2                         " shiftwidth
-set relativenumber
-set number
-syntax on
+color railscasts
+inoremap jj <ESC>
 filetype plugin indent on
-colorscheme desert
-set nobackup
+syntax on
+set expandtab
+set softtabstop=2
+set shiftwidth=2
+set number
+set relativenumber
 
-" indentation 
-filetype plugin indent on 
-set autoindent
-map <Leader>i mmgg=G`m<CR>
-
-" search options
-set incsearch
-set hlsearch
-set ignorecase
-set smartcase
-nmap <leader>h :nohlsearch<cr>
-
-" split options
-set splitbelow
-set splitright
-set winwidth=84
-set winheight=5
-set winminheight=5
-set winheight=999
-
-" mouse options
-set ttyfast
 set mouse=a
-set ttymouse=xterm2
