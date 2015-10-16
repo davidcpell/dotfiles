@@ -16,12 +16,6 @@ ZSH_THEME="murilasso"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
@@ -44,13 +38,6 @@ ZSH_THEME="murilasso"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git bundler)
 
 # User configuration
@@ -94,11 +81,12 @@ export TERM=xterm-256color
 #
 
 alias es="exec $SHELL"
-alias zshrc="vim ~/code/dotfiles/.zshrc"
-alias vimrc="vim ~/code/dotfiles/.vimrc"
+alias zshrc="vim ~/code/dotfiles/zshrc"
+alias vimrc="vim ~/code/dotfiles/vimrc"
+alias tmconf="vim ~/code/dotfiles/tmux.conf"
 
 # move around
-alias cdblog="cd ~/code/blog"
+alias blog="cd ~/code/blog"
 alias beedle="cd ~/work/personal/beedle"
 alias dotfiles="cd ~/code/dotfiles"
 alias upcase="cd ~/code/ruby/upcase"
@@ -118,4 +106,7 @@ alias zs="zeus start"
 alias zc="zeus console"
 alias zr="zeus rspec"
 
+# Ai specific
+alias nhltest="RAILS_ENV=nhl_test"
+alias nhldev="RAILS_ENV=nhl_development"
 cd ~/work/stats
