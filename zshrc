@@ -1,9 +1,9 @@
 os=`uname`
 
 # Path to your oh-my-zsh installation.
-if [ $os = "Darwin" ] ; then 
+if [ $os = "Darwin" ] ; then
   export ZSH=/Users/davidpell/.oh-my-zsh
-elif [ $os = "Linux" ] ; then 
+elif [ $os = "Linux" ] ; then
   export ZSH=/home/davidp/.oh-my-zsh
 fi
 
@@ -38,10 +38,10 @@ ZSH_THEME="murilasso"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
-plugins=(git bundler)
+plugins=(git)
 
 # User configuration
-if [ $os = "Darwin" ] ; then 
+if [ $os = "Darwin" ] ; then
   export PATH="/usr/local/rvm/gems/ruby-2.2.0/bin:/usr/local/rvm/gems/ruby-2.2.0@global/bin:/usr/local/rvm/rubies/ruby-2.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/rvm/bin:/usr/local/java/jdk1.7.0_02/bin:/usr/local/java/jdk1.7.0_02/jre/bin"
 
   export PATH="~/.rbenv/shims:$PATH"
@@ -49,7 +49,7 @@ if [ $os = "Darwin" ] ; then
 
   ### Added by the Heroku Toolbelt
   export PATH="/usr/local/heroku/bin:$PATH"
-elif [ $os = "Linux" ] ; then  
+elif [ $os = "Linux" ] ; then
   export PATH="/home/davidp/local/bin:/usr/local/rvm/gems/ruby-2.2.0/bin:/usr/local/rvm/gems/ruby-2.2.0@global/bin:/usr/local/rvm/rubies/ruby-2.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/rvm/bin:/usr/local/java/jdk1.7.0_02/bin:/usr/local/java/jdk1.7.0_02/jre/bin"
 fi
 
@@ -109,4 +109,5 @@ alias zr="zeus rspec"
 # Ai specific
 alias nhltest="RAILS_ENV=nhl_test"
 alias nhldev="RAILS_ENV=nhl_development"
+alias nhlprod="RAILS_ENV=nhl_production"
 cd ~/work/stats
