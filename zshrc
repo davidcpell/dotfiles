@@ -80,6 +80,7 @@ export TERM=xterm-256color
 # For a full list of active aliases, run `alias`.
 #
 
+unsetopt nomatch
 alias es="exec $SHELL"
 alias zshrc="vim ~/code/dotfiles/zshrc"
 alias vimrc="vim ~/code/dotfiles/vimrc"
