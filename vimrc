@@ -1,3 +1,7 @@
+call plug#begin('~/.vim/plugged')
+Plug 'kien/ctrlp.vim'
+call plug#end()
+
 color railscasts
 
 " More easily return to normal mode
