@@ -111,4 +111,5 @@ alias zr="zeus rspec"
 alias nhltest="RAILS_ENV=nhl_test"
 alias nhldev="RAILS_ENV=nhl_development"
 alias nhlprod="RAILS_ENV=nhl_production"
+alias nhltestall="RAILS_ENV=nhl_test m test/models/nhl"
 cd ~/work/stats
