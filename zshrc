@@ -65,9 +65,6 @@ fi
 # set up path for vim 7.4
 export PATH="/usr/local/Cellar/vim/7.4.712_1/bin:$PATH"
 
-# use 256 color mode for vim
-export TERM=xterm-256color
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -112,4 +109,4 @@ alias nhltest="RAILS_ENV=nhl_test"
 alias nhldev="RAILS_ENV=nhl_development"
 alias nhlprod="RAILS_ENV=nhl_production"
 alias nhltestall="RAILS_ENV=nhl_test m test/models/nhl"
-cd ~/work/stats
+# cd ~/work/stats
