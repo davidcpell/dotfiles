@@ -55,12 +55,7 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-#  Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
- export EDITOR='vim'
-else
- export EDITOR='atom'
-fi
+export EDITOR='vim'
 
 # set up path for vim 7.4
 export PATH="/usr/local/Cellar/vim/7.4.712_1/bin:$PATH"

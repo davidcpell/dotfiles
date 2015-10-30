@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'kien/ctrlp.vim'
 call plug#end()
 
-color railscasts
+color molokai
 
 " More easily return to normal mode
 imap jk <ESC>
