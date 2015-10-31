@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-endwise'
 call plug#end()
 
 color molokai
