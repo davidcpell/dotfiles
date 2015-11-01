@@ -78,6 +78,8 @@ alias zshrc="vim ~/code/dotfiles/zshrc"
 alias vimrc="vim ~/code/dotfiles/vimrc"
 alias tmconf="vim ~/code/dotfiles/tmux.conf"
 
+alias tmls="tmux ls"
+
 # move around
 alias blog="cd ~/code/blog"
 alias beedle="cd ~/work/personal/beedle"
