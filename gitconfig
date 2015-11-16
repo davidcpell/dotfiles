@@ -6,3 +6,5 @@
 	email = davidcpell@gmail.com
 [push]
 	default = simple
+[color]
+	ui = auto
