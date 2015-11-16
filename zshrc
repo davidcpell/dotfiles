@@ -73,10 +73,13 @@ export PATH="/usr/local/Cellar/vim/7.4.712_1/bin:$PATH"
 #
 
 unsetopt nomatch
+
+alias ls="ls -alF"
 alias es="exec $SHELL"
 alias zshrc="vim ~/code/dotfiles/zshrc"
 alias vimrc="vim ~/code/dotfiles/vimrc"
 alias tmconf="vim ~/code/dotfiles/tmux.conf"
+alias gitconf="vim ~/code/dotfiles/gitconfig"
 
 alias tmls="tmux ls"
 
