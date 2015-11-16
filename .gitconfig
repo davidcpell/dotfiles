@@ -1,0 +1,8 @@
+[alias]
+	co = checkout
+	c = commit
+[user]
+	name = David Pell
+	email = davidcpell@gmail.com
+[push]
+	default = simple
