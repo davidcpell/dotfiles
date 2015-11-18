@@ -4,7 +4,7 @@ os=`uname`
 if [ $os = "Darwin" ] ; then
   export ZSH=/Users/davidpell/.oh-my-zsh
 elif [ $os = "Linux" ] ; then
-  export ZSH=/home/davidp/.oh-my-zsh
+  export ZSH=/home/david/.oh-my-zsh
 fi
 
 # Set name of the theme to load.
@@ -50,7 +50,7 @@ if [ $os = "Darwin" ] ; then
   ### Added by the Heroku Toolbelt
   export PATH="/usr/local/heroku/bin:$PATH"
 elif [ $os = "Linux" ] ; then
-  export PATH="/home/davidp/code/dotfiles:/home/davidp/local/bin:/usr/local/rvm/gems/ruby-2.2.0/bin:/usr/local/rvm/gems/ruby-2.2.0@global/bin:/usr/local/rvm/rubies/ruby-2.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/rvm/bin:/usr/local/java/jdk1.7.0_02/bin:/usr/local/java/jdk1.7.0_02/jre/bin"
+  export PATH="/home/david/code/dotfiles:/home/david/local/bin:/usr/local/rvm/gems/ruby-2.2.0/bin:/usr/local/rvm/gems/ruby-2.2.0@global/bin:/usr/local/rvm/rubies/ruby-2.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/rvm/bin:/usr/local/java/jdk1.7.0_02/bin:/usr/local/java/jdk1.7.0_02/jre/bin"
 fi
 
 source $ZSH/oh-my-zsh.sh
@@ -98,11 +98,6 @@ alias gs="git status"
 alias gca="git commit -am"
 alias gcm="git checkout master"
 alias gitkill="git checkout . && git clean -f -d"
-
-# zeus
-alias zs="zeus start"
-alias zc="zeus console"
-alias zr="zeus rspec"
 
 # Ai specific
 alias nhltest="RAILS_ENV=nhl_test"
