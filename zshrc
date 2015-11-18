@@ -93,10 +93,11 @@ alias stats="cd ~/work/stats"
 # git
 alias gaa="git add -A"
 alias gb="git branch"
-alias gco="git checkout"
-alias gs="git status"
 alias gca="git commit -am"
 alias gcm="git checkout master"
+alias gco="git checkout"
+alias gf="git fetch"
+alias gs="git status"
 alias gitkill="git checkout . && git clean -f -d"
 
 # Ai specific
