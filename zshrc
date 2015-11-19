@@ -97,6 +97,7 @@ alias gca="git commit -am"
 alias gcm="git checkout master"
 alias gco="git checkout"
 alias gf="git fetch"
+alias gp="git pull"
 alias gs="git status"
 alias gitkill="git checkout . && git clean -f -d"
 
