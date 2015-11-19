@@ -81,7 +81,10 @@ alias vimrc="vim ~/code/dotfiles/vimrc"
 alias tmconf="vim ~/code/dotfiles/tmux.conf"
 alias gitconf="vim ~/code/dotfiles/gitconfig"
 
+# tmux
+alias tkst="tmux kill-session -t"
 alias tmls="tmux ls"
+alias tns="tmux new -s"
 
 # move around
 alias blog="cd ~/code/blog"
