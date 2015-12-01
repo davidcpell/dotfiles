@@ -108,5 +108,7 @@ alias gitkill="git checkout . && git clean -f -d"
 alias nhltest="RAILS_ENV=nhl_test"
 alias nhldev="RAILS_ENV=nhl_development"
 alias nhlprod="RAILS_ENV=nhl_production"
-alias nhltestall="RAILS_ENV=nhl_test m test/models/nhl"
+alias nhltestmodels="RAILS_ENV=nhl_test m test/models/nhl"
+alias nhltestreps="RAILS_ENV=nhl_test m test/representers"
+alias nhltestnhlreps="RAILS_ENV=nhl_test m test/representers/nhl"
 # cd ~/work/stats
