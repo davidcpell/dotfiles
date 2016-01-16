@@ -1,6 +1,8 @@
 [alias]
 	co = checkout
 	c = commit
+	ls = log --oneline --decorate --graph --all
+	glog = log -E -i --grep
 [user]
 	name = David Pell
 	email = davidcpell@gmail.com
