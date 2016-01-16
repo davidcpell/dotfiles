@@ -82,9 +82,10 @@ alias tmconf="vim ~/code/dotfiles/tmux.conf"
 alias gitconf="vim ~/code/dotfiles/gitconfig"
 
 # tmux
-alias tkst="tmux kill-session -t"
+alias tmkill="tmux kill-session -t"
 alias tmls="tmux ls"
-alias tns="tmux new -s"
+alias tmnew="tmux new -s"
+alias tmatt="tmux attach -t"
 
 # move around
 alias blog="cd ~/code/blog"
@@ -103,12 +104,3 @@ alias gf="git fetch"
 alias gp="git pull"
 alias gs="git status"
 alias gitkill="git checkout . && git clean -f -d"
-
-# Ai specific
-alias nhltest="RAILS_ENV=nhl_test"
-alias nhldev="RAILS_ENV=nhl_development"
-alias nhlprod="RAILS_ENV=nhl_production"
-alias nhltestmodels="RAILS_ENV=nhl_test m test/models/nhl"
-alias nhltestreps="RAILS_ENV=nhl_test m test/representers"
-alias nhltestnhlreps="RAILS_ENV=nhl_test m test/representers/nhl"
-# cd ~/work/stats
