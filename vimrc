@@ -1,15 +1,21 @@
-call plug#begin('~/.vim/plugged')
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'kien/ctrlp.vim'
-Plug 'kchmck/vim-coffee-script'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-endwise'
-Plug 'luochen1990/rainbow'
-Plug 'thoughtbot/vim-rspec'
-Plug 'vim-ruby/vim-ruby'
-call plug#end()
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'kien/ctrlp.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-endwise'
+Plugin 'luochen1990/rainbow'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'vim-ruby/vim-ruby'
+call vundle#end()
 
 " Use rainbow parentheses 
 let g:rainbow_active = 1
