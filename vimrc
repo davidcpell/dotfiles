@@ -1,10 +1,18 @@
 call plug#begin('~/.vim/plugged')
-Plug 'kien/ctrlp.vim'
-Plug 'tpope/vim-endwise'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'thoughtbot/vim-rspec'
+Plug 'kien/ctrlp.vim'
+Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
+Plug 'luochen1990/rainbow'
+Plug 'thoughtbot/vim-rspec'
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
+
+" Use rainbow parentheses 
+let g:rainbow_active = 1
 
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
 let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
@@ -18,6 +26,8 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+let g:rspec_command = "!bundle exec rspec -f d -c {spec}"
 
 color molokai
 
