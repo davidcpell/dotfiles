@@ -3,6 +3,9 @@
 	c = commit
 	ls = log --oneline --decorate --graph --all
 	glog = log -E -i --grep
+	car = commit --amend --no-edit
+	unstage = reset
+	uncommit = reset --soft HEAD^
 [user]
 	name = David Pell
 	email = davidcpell@gmail.com
