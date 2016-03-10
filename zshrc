@@ -3,6 +3,7 @@ os=`uname`
 # Path to your oh-my-zsh installation.
 if [ $os = "Darwin" ] ; then
   export ZSH=/Users/davidpell/.oh-my-zsh
+  source ~/.ai_env
 elif [ $os = "Linux" ] ; then
   export ZSH=/home/david/.oh-my-zsh
 fi
@@ -74,6 +75,7 @@ export PATH="/usr/local/Cellar/vim/7.4.712_1/bin:$PATH"
 
 unsetopt nomatch
 
+alias be="bundle exec"
 alias ls="ls -aG"
 alias es="exec $SHELL"
 alias zshrc="vim ~/code/dotfiles/zshrc"
