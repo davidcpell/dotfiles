@@ -17,6 +17,17 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'vim-ruby/vim-ruby'
 call vundle#end()
 
+" Change leader key to spacebar 
+let mapleader = "\<Space>"
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+let g:rspec_command = "!bundle exec rspec -f d -c {spec}"
+
 " Use rainbow parentheses 
 let g:rainbow_active = 1
 
@@ -27,21 +38,11 @@ let g:ctrlp_use_caching = 0
 " Activate matchit.vim
 runtime macros/matchit.vim
 
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
-let g:rspec_command = "!bundle exec rspec -f d -c {spec}"
-
 color molokai
 
 " More easily return to normal mode
 imap jk <ESC>
 
-" Change leader key to spacebar 
-let mapleader = "\<Space>"
 
 " Treat wrapped text as individual lines
 nmap j gj
