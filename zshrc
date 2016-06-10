@@ -64,4 +64,4 @@ alias gp="git pull"
 alias gs="git status"
 alias gitkill="git checkout . && git clean -f -d"
 
-alias rbinstall="RUBY_CONFIGURE_OPTS=--with-readline-dir=`brew --prefix readline` rbenv install"
+alias rbinstall='RUBY_CONFIGURE_OPTS=--with-readline-dir=`brew --prefix readline` rbenv install'
