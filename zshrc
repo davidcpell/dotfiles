@@ -18,17 +18,15 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 unsetopt nomatch
 
-# rbenv
 export PATH="$home_dir/.rbenv/bin:$PATH"
 export PATH="$home_dir/.rbenv/shims:$PATH"
+export PATH="$home_dir/code/dotfiles:$PATH"
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# Path configuration
-export PATH="~/code/dotfiles:$PATH"
-
 if [ $os = "Darwin" ] ; then
-  export PATH="/usr/local/heroku/bin:$PATH"
-  export PATH="/usr/local/Cellar/vim:$PATH"
+  export PATH="/usr/local/heroku:$PATH"
+  export PATH="/usr/local/Cellar/:$PATH"
 elif [ $os = "Linux" ] ; then
   # export PATH="/home/david/code/dotfiles:/home/david/local/bin:/usr/local/rvm/gems/ruby-2.2.0/bin:/usr/local/rvm/gems/ruby-2.2.0@global/bin:/usr/local/rvm/rubies/ruby-2.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/rvm/bin:/usr/local/java/jdk1.7.0_02/bin:/usr/local/java/jdk1.7.0_02/jre/bin"
   # don't think this is necessary right now
@@ -67,3 +65,7 @@ alias gs="git status"
 alias gitkill="git checkout . && git clean -f -d"
 
 alias rbinstall='RUBY_CONFIGURE_OPTS=--with-readline-dir=`brew --prefix readline` rbenv install'
+
+if [ -e $home_dir/.rean-creds ]; then
+  source $home_dir/.rean-creds
+fi
