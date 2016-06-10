@@ -17,8 +17,8 @@ export EDITOR='vim'
 unsetopt nomatch
 
 # rbenv
-export PATH="~/.rbenv/bin:$PATH"
-export PATH="~/.rbenv/shims:$PATH"
+export PATH="/Users/david/.rbenv/bin:$PATH"
+export PATH="/Users/david/.rbenv/shims:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Path configuration
@@ -64,7 +64,4 @@ alias gp="git pull"
 alias gs="git status"
 alias gitkill="git checkout . && git clean -f -d"
 
-# creds 
-if [ -e ~/.rean-creds ]; then
-  source ~/.rean-creds
-fi
+alias rbinstall="RUBY_CONFIGURE_OPTS=--with-readline-dir=`brew --prefix readline` rbenv install"
