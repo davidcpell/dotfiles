@@ -3,8 +3,10 @@ os=`uname`
 # Path to your oh-my-zsh installation.
 if [ $os = "Darwin" ] ; then
   export ZSH=/Users/david/.oh-my-zsh
+  home_dir=/Users/david
 elif [ $os = "Linux" ] ; then
   export ZSH=/home/david/.oh-my-zsh
+  home_dir=/home/david
 fi
 
 # Set name of the theme to load.
@@ -17,8 +19,8 @@ export EDITOR='vim'
 unsetopt nomatch
 
 # rbenv
-export PATH="/Users/david/.rbenv/bin:$PATH"
-export PATH="/Users/david/.rbenv/shims:$PATH"
+export PATH="$home_dir/.rbenv/bin:$PATH"
+export PATH="$home_dir/.rbenv/shims:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Path configuration
