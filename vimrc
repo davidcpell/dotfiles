@@ -15,6 +15,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'luochen1990/rainbow'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-surround'
 call vundle#end()
 
 " Change leader key to spacebar 
