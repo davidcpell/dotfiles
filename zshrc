@@ -1,13 +1,6 @@
 os=`uname`
 
-# Path to your oh-my-zsh installation.
-if [ $os = "Darwin" ] ; then
-  export ZSH=/Users/david/.oh-my-zsh
-  home_dir=/Users/david
-elif [ $os = "Linux" ] ; then
-  export ZSH=/home/david/.oh-my-zsh
-  home_dir=/home/david
-fi
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -17,22 +10,22 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
 unsetopt nomatch
-
-export PATH="$home_dir/.rbenv/bin:$PATH"
-export PATH="$home_dir/.rbenv/shims:$PATH"
-export PATH="$home_dir/code/dotfiles:$PATH"
-
+export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+export PATH="$HOME/code/dotfiles:$PATH"
+
+export GOHOME="$HOME/code/go"
+export PATH="/usr/local/go/bin:$PATH"
+
 
 if [ $os = "Darwin" ] ; then
   export PATH="/usr/local/heroku:$PATH"
   export PATH="/usr/local/Cellar/:$PATH"
-elif [ $os = "Linux" ] ; then
-  # export PATH="/home/david/code/dotfiles:/home/david/local/bin:/usr/local/rvm/gems/ruby-2.2.0/bin:/usr/local/rvm/gems/ruby-2.2.0@global/bin:/usr/local/rvm/rubies/ruby-2.2.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/rvm/bin:/usr/local/java/jdk1.7.0_02/bin:/usr/local/java/jdk1.7.0_02/jre/bin"
-  # don't think this is necessary right now
 fi
 
 alias be="bundle exec"
+alias ce="chef exec"
 alias ls="ls -aG"
 alias es="exec $SHELL"
 alias zshrc="vim ~/code/dotfiles/zshrc"
@@ -66,6 +59,6 @@ alias gitkill="git checkout . && git clean -f -d"
 
 alias rbinstall='RUBY_CONFIGURE_OPTS=--with-readline-dir=`brew --prefix readline` rbenv install'
 
-if [ -e $home_dir/.rean-creds ]; then
-  source $home_dir/.rean-creds
+if [ -e $HOME/.rean-creds ]; then
+  source $HOME/.rean-creds
 fi
