@@ -1,22 +1,7 @@
+execute pathogen#infect()
+
 set nocompatible
 filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'kien/ctrlp.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-endwise'
-Plugin 'luochen1990/rainbow'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-surround'
-call vundle#end()
 
 " Change leader key to spacebar 
 let mapleader = "\<Space>"
@@ -43,7 +28,6 @@ color molokai
 
 " More easily return to normal mode
 imap jk <ESC>
-
 
 " Treat wrapped text as individual lines
 nmap j gj
