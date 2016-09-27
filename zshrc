@@ -10,6 +10,8 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
 unsetopt nomatch
+
+export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -17,7 +19,6 @@ export PATH="$HOME/code/dotfiles:$PATH"
 
 export GOHOME="$HOME/code/go"
 export PATH="/usr/local/go/bin:$PATH"
-
 
 if [ $os = "Darwin" ] ; then
   export PATH="/usr/local/heroku:$PATH"
