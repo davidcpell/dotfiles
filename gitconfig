@@ -4,6 +4,7 @@
 	ls = log --oneline --decorate --graph --all
 	glog = log -E -i --grep
 	car = commit --amend --no-edit
+        s = status
 	unstage = reset
 	uncommit = reset --soft HEAD^
 [user]
