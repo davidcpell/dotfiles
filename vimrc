@@ -24,8 +24,6 @@ let g:ctrlp_use_caching = 0
 " Activate matchit.vim
 runtime macros/matchit.vim
 
-color molokai
-
 " More easily return to normal mode
 imap jk <ESC>
 
