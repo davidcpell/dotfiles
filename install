@@ -43,3 +43,8 @@ ls $dir &> /dev/null || git clone https://github.com/ctrlpvim/ctrlp.vim.git $dir
 
 # Link vimrc
 ln -fs $(pwd)/vimrc ~/.vimrc
+
+### RUBY ###
+
+ln -fs $(pwd)/gemrc ~/.gemrc
+brew list rbenv &> /dev/null || brew install rbenv
