@@ -34,5 +34,12 @@ ln -fs $(pwd)/gitconfig ~/.gitconfig
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+# Install Pathogen Plugins
+dir=~/.vim/bundle/vim-go
+ls $dir &> /dev/null || git clone https://github.com/fatih/vim-go.git $dir
+
+dir=~/.vim/bundle/ctrlp.vim
+ls $dir &> /dev/null || git clone https://github.com/ctrlpvim/ctrlp.vim.git $dir
+
 # Link vimrc
 ln -fs $(pwd)/vimrc ~/.vimrc
