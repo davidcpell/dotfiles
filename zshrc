@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/david/.oh-my-zsh"
+export ZSH="/Users/$(whoami)/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="half-life"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,9 +70,21 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
-alias  es="exec $SHELL"
-alias gca="git add -A && git commit"
-alias  gs="git status"
-alias  tf="terraform"
+alias gb="git branch"
+alias gd="git diff"
+alias es="exec $SHELL"
+alias gca="git add -A && git commit -m"
+alias gcm="git checkout master"
+alias gp="git pull"
+alias gs="git status"
+alias ipy="ipython"
+alias py="python"
+alias tf="terraform"
 
-eval "$(rbenv init -)"
+if command -v rbenv 1>/dev/null 2>&1; then
+  eval "$(rbenv init -)"
+fi
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
