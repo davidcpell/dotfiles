@@ -68,6 +68,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+export CDPATH="$HOME/src"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 alias gb="git branch"
