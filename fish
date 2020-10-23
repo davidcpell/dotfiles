@@ -10,3 +10,10 @@ alias gs "git status"
 alias ipy "ipython"
 alias py "python"
 alias tf "terraform"
+
+### PATH ###
+set -gx PATH "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" $PATH
+set -gx PATH "/usr/local/bin" $PATH
+
+### VARS ###
+set SHELL "/usr/local/bin/fish"
