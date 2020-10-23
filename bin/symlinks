@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+script_dir=$(dirname $(realpath $0))
+
+ln -fs "$script_dir/agignore" ~/.agignore
+ln -fs "$script_dir/gemrc" ~/.gemrc
+ln -fs "$script_dir/gitconfig" ~/.gitconfig
