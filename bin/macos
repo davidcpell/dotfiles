@@ -13,3 +13,5 @@ brew install fish \
   the_silver_searcher
 
 "$script_dir/symlinks"
+ln -fs "$(dirname $script_dir)/vscode_settings" "$HOME/Library/Application Support/Code/user/settings.json"
+ln -fs "$(dirname $script_dir)/vscode_keybindings" "$HOME/Library/Application Support/Code/user/keybindings.json"
