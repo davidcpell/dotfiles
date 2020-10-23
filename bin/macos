@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+brew --version &> /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew install fish \
+  git \
+  jq \
+  neovim \
+  pyenv \
+  rbenv \
+  the_silver_searcher
+
+script_path=$(realpath $0)
+script_dir=$(dirname $script_path)
+source "$script_dir/../symlinks.sh"
