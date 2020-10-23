@@ -1,0 +1,31 @@
+#!/bin/bash
+
+script_dir=$(dirname $(realpath $0))
+
+apt install -y fish \
+	git \
+	jq \
+	silversearcher-ag \
+	vim
+
+### PYTHON ###
+curl https://pyenv.run | bash
+
+### VIM ###
+# Install Pathogen 
+mkdir -p "$HOME/.vim/autoload" "$HOME/.vim/bundle"
+curl -LSso "$HOME/.vim/autoload/pathogen.vim" "https://tpo.pe/pathogen.vim"
+
+# Install Pathogen Plugins
+dir=~/.vim/bundle/ctrlp.vim
+ls $dir &> /dev/null || git clone https://github.com/ctrlpvim/ctrlp.vim.git $dir
+
+# Link vimrc
+ln -fs $(pwd)/vimrc ~/.vimrc
+
+### RUBY ###
+# Install rbenv
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+
+### FINISH UP ###
+"$script_dir/symlinks"
