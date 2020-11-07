@@ -22,5 +22,6 @@
     "[python]": {
       "editor.tabSize": 4
     },
-    "terminal.integrated.shell.osx": "fish"
+    "python.languageServer": "Microsoft",
+    "terminal.integrated.automationShell.linux": "zsh"
 }

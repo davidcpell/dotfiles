@@ -3,7 +3,7 @@
 script_dir=$(dirname $(dirname $(realpath $0)))
 
 ln -fs "$script_dir/agignore" "$HOME/.agignore"
-ln -fs "$script_dir/fish" "$HOME/.config/fish/config.fish"
+ln -fs "$script_dir/zshrc" "$HOME/.zshrc"
 ln -fs "$script_dir/gemrc" "$HOME/.gemrc"
 ln -fs "$script_dir/gitconfig" "$HOME/.gitconfig"
 ln -fs "$script_dir/vimrc" "$HOME/.vimrc"

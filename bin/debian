@@ -2,11 +2,13 @@
 
 script_dir=$(dirname $(realpath $0))
 
-apt install -y fish \
+apt install -y zsh \
 	git \
 	jq \
 	silversearcher-ag \
 	vim
+
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ### PYTHON ###
 curl https://pyenv.run | bash
